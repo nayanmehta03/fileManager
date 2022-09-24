@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 //Test Input
@@ -14,7 +15,9 @@ public class main {
     public static void showFiles(int indent) throws IOException {
         File folder = new File(rootPath);
         String pad = new String(new char[indent]).replace("\0", "  ");
-        for (File entry : folder.listFiles()) {
+        File[] files = folder.listFiles();
+        Arrays.sort(files);
+        for (File entry : files) {
             if (entry.isDirectory()) {
                 String oldPath = rootPath;
                 String newPath = entry.getCanonicalPath();
