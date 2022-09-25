@@ -104,12 +104,13 @@ public class main {
             switch (option) {
                 case 0:
                     //Menu
-                    System.out.println("1. Show files");
-                    System.out.println("2. Add File");
-                    System.out.println("3. Delete File");
-                    System.out.println("4. Search File");
-                    System.out.println("5. Show Root Path");
-                    System.out.println("6. Change Root Path");
+                    System.out.println("1.  Show files");
+                    System.out.println("2.  Add File");
+                    System.out.println("3.  Delete File");
+                    System.out.println("4.  Search File");
+                    System.out.println("5.  Show Root Path");
+                    System.out.println("6.  Change Root Path");
+                    System.out.println("99. Quit");
                     System.out.print("Select a option to execute: ");
 
                     option = sc.nextInt();
@@ -124,7 +125,7 @@ public class main {
                     showFiles(0);
                     System.out.println("--------------------------------------------------------");
 
-                    System.out.println("0. Return to menu");
+                    System.out.println("0.  Return to menu");
                     System.out.println("99. Exit");
                     System.out.print("Enter option: ");
                     option = sc.nextInt();
@@ -149,7 +150,7 @@ public class main {
                         System.out.println("Failed to create new file.");
                     }
                     System.out.println("--------------------------------------------------------");
-                    System.out.println("0. Return to menu");
+                    System.out.println("0.  Return to menu");
                     System.out.println("99. Exit");
                     System.out.print("Enter option: ");
                     option = sc.nextInt();
@@ -167,7 +168,7 @@ public class main {
                     System.out.println("--------------------------------------------------------");
                     deleteFile(deleteName);
                     System.out.println("--------------------------------------------------------");
-                    System.out.println("0. Return to menu");
+                    System.out.println("0.  Return to menu");
                     System.out.println("99. Exit");
                     System.out.print("Enter option: ");
                     option = sc.nextInt();
@@ -189,7 +190,7 @@ public class main {
                         System.out.println("--------------------------------------------------------");
                     }
                     System.out.println("--------------------------------------------------------");
-                    System.out.println("0. Return to menu");
+                    System.out.println("0.  Return to menu");
                     System.out.println("99. Exit");
                     System.out.print("Enter option: ");
                     option = sc.nextInt();
@@ -202,7 +203,7 @@ public class main {
                     System.out.println("--------------------------------------------------------");
                     System.out.println("Current Path: " + getRootPath());
                     System.out.println("--------------------------------------------------------");
-                    System.out.println("0. Return to menu");
+                    System.out.println("0.  Return to menu");
                     System.out.println("99. Exit");
                     System.out.print("Enter option: ");
                     option = sc.nextInt();
@@ -217,7 +218,7 @@ public class main {
                     System.out.println("Enter new path: ");
                     newPath = sc.next();
                     setRootPath(newPath);
-                    System.out.println("0. Return to menu");
+                    System.out.println("0.  Return to menu");
                     System.out.println("99. Exit");
                     System.out.print("Enter option: ");
                     option = sc.nextInt();
@@ -229,11 +230,7 @@ public class main {
                     System.out.println("Returning to main menu...");
                     option = 0;
                     break;
-
-                case 99:
-                    //Exit
-                    System.out.println("Exiting Program ...");
-                    break;
+                    
             }
         } while (option != 99);
     }
